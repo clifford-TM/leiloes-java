@@ -145,19 +145,19 @@ public class cadastroVIEW extends javax.swing.JFrame {
         String nome = cadastroNome.getText();
         String valor = cadastroValor.getText();
         String status = "A Venda";
-
+        
         produto.setNome(nome);
         produto.setValor(Integer.parseInt(valor));
         produto.setStatus(status);
-
+        
         ProdutosDAO produtodao = new ProdutosDAO();
         produtodao.cadastrarProduto(produto);
-
+        
         javax.swing.JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
-
+        
         cadastroNome.setText("");
         cadastroValor.setText("");
-
+        
     } catch (Exception e) {
         javax.swing.JOptionPane.showMessageDialog(null, "Erro ao cadastrar produto: " + e.getMessage());
     }
